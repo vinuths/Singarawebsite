@@ -8,6 +8,8 @@ import Client from "./components/pages/clients";
 import Service from "./components/pages/service";
 import Contact from "./components/pages/contact";
 import Demo from "./components/pages/demo";
+import Directors from "./components/pages/Directors";
+
 import './index.css'
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
       <Demo />
       <Client />
       <Contact />
+      <Directors />
       <Footer />
+      
     </div>
   );
 }
