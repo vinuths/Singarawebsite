@@ -32,11 +32,13 @@ const Navbar = () => {
 
   return (
     <div className={`fixed top-0 z-50 w-full h-[70px] flex justify-between items-center px-4 text-black ${isScrolled ? "bg-white" : "bg-transparent"}`} >
-      <div className="text-4xl cursor-pointer inline-flex items-center text-amber-800">
-        <Link to="home" smooth={true} duration={500}>
-          My Real Estate
-        </Link>
-      </div>
+ <div className="cursor-pointer inline-flex flex-col items-start leading-tight">
+  <Link to="home" smooth={true} duration={500} className="text-blue-800">
+    <span className="block text-5xl font-extrabold">SINGARA</span>
+    <span className="block text-2xl font-medium">Estates And Properties</span>
+  </Link>
+</div>
+
       <div className="md:hidden" onClick={handleMenuClick}>
       {showMenu ? (
         <svg
@@ -66,8 +68,7 @@ const Navbar = () => {
         </svg>
         )}
       </div>
-      <ul className="hidden md:flex">
-        <li>
+<ul className="hidden md:flex text-black gap-6 items-center font-bold">        <li>
           <Link to="home" smooth={true} duration={500}>
             Home
           </Link>
@@ -104,14 +105,13 @@ const Navbar = () => {
         </li>
       
       </ul>
-      <div className="hidden md:flex">
-       
-        <button className="px-4 py-2 bg-amber-800 text-white rounded-md hover:bg-amber-900 hover:text-white mx-2">
-          <Link to="contact" smooth={true} duration={500}>
-            Contact Us
-          </Link>
-        </button>
-      </div>
+     <div className="hidden md:flex">
+  <button className="px-4 py-2 bg-amber-800 text-white rounded-md hover:bg-amber-900 mx-2 font-semibold">
+    <Link to="contact" smooth={true} duration={500}>
+      Contact Us
+    </Link>
+  </button>
+</div>
       <div
         className={`${
           showMenu ? "flex" : "hidden"
